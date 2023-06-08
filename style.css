@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap");
+
+:root {
+  --color-background: #faf8f6;
+  --color-dark-blue: #13183f;
+  --color-blue-gray: #666ca3;
+  --color-gray: #83869a;
+  --color-pink: #f74780;
+  --color-white: #ffffff;
+  --color-gradient-button: linear-gradient(to top, #f02aa6, #ff6f48);
+  --color-gradient-button-footer: linear-gradient(to top, #f02aa6, #4851ff);
+
+  --font-heading-xl: 4rem;
+  --font-heading-l: 2.5rem;
+  --font-heading-m: 2rem;
+  --font-heading-s: 1.5rem;
+  --font-body-m: 1.1rem;
+  --font-body-s: 1rem;
+
+  --line-weight-xl: 4.3rem;
+  --line-weight-l: 2.5rem;
+  --line-weight-m: 2rem;
+  --line-weight-s: 1.5rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  overflow-x: hidden;
+}
+main {
+  margin: 0 10rem;
+}
+
+h1 {
+  font-size: var(--font-heading-xl);
+  line-height: var(--line-weight-xl);
+  color: var(--color-dark-blue);
+}
+
+h2 {
+  font-size: var(--font-heading-l);
+  line-height: var(--line-weight-l);
+  font-weight: 800;
+}
+
+h3 {
+  font-size: var(--font-heading-m);
+  line-height: var(--font-heading-m);
+  font-weight: 800;
+}
+
+h4 {
+  font-size: var(--font-heading-s);
+  line-height: var(--font-heading-s);
+  font-weight: 800;
+}
+
+header {
+  margin: 2rem 10rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.button-size {
+  border-style: none;
+  color: var(--color-white);
+  border-radius: 2rem;
+  padding: 0.8rem 2rem;
+  font-size: var(--font-body-m);
+}
+
+header > button {
+  background-color: var(--color-dark-blue);
+}
+
+.section-hero1 {
+  height: 45rem;
+  display: flex;
+  align-items: center;
+}
+
+.section-hero1 > div {
+  overflow-x: hidden;
+}
+
+.section-hero1 > div > p {
+  width: 50%;
+  margin: 2rem 0;
+}
+
+.section-hero1 > div > button {
+  background: var(--color-gradient-button);
+}
+
+.section-hero1 > div > img {
+  position: absolute;
+  left: 50%;
+  top: -15%;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 -10rem 0 -10rem;
+  padding: 2rem 10rem;
+  background-color: var(--color-dark-blue);
+}
+
+footer > button {
+  background: var(--color-gradient-button-footer);
+}
