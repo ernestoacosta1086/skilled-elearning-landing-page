@@ -6,9 +6,11 @@
   --color-blue-gray: #666ca3;
   --color-gray: #83869a;
   --color-pink: #f74780;
+  --color-pink-light: #ffa7c3;
   --color-white: #ffffff;
   --color-gradient-button: linear-gradient(to top, #f02aa6, #ff6f48);
   --color-gradient-button-footer: linear-gradient(to top, #f02aa6, #4851ff);
+  --color-gradient-button-body: linear-gradient(to top, #f0f1ff, #ffffff 60%);
 
   --font-heading-xl: 4rem;
   --font-heading-l: 2.5rem;
@@ -36,6 +38,7 @@
 body {
   font-family: "Plus Jakarta Sans", sans-serif;
   overflow-x: hidden;
+  background: var(--color-gradient-button-body);
 }
 main {
   margin: 0 10rem;
@@ -71,6 +74,11 @@ header {
   justify-content: space-between;
   align-items: center;
 }
+
+header > img {
+  z-index: 1;
+}
+
 .button-size {
   border-style: none;
   color: var(--color-white);
@@ -81,6 +89,12 @@ header {
 
 header > button {
   background-color: var(--color-dark-blue);
+  z-index: 2;
+}
+
+header > button:hover {
+  cursor: pointer;
+  background-color: var(--color-blue-gray);
 }
 
 .section-hero1 {
@@ -102,10 +116,68 @@ header > button {
   background: var(--color-gradient-button);
 }
 
+.section-hero1 > div > button:hover {
+  cursor: pointer;
+  opacity: 0.5;
+}
+
 .section-hero1 > div > img {
   position: absolute;
   left: 50%;
   top: -15%;
+}
+
+.section-cards {
+  display: grid;
+  grid-template: 1fr 1fr/1fr 1fr 1fr;
+  column-gap: 2rem;
+  row-gap: 4rem;
+  margin: 4rem 0 8rem 0;
+}
+
+.main-card-div {
+  background: var(--color-gradient-button);
+  color: var(--color-white);
+  padding: 4rem 2rem;
+  border-radius: 0.6rem;
+  height: 18rem;
+}
+
+.card-div {
+  border-radius: 0.6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2rem;
+  border: none;
+  color: var(--color-dark-blue);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.09);
+  background-color: white;
+}
+
+.card-div > img {
+  width: 4rem;
+  position: relative;
+  top: -4rem;
+}
+
+.card-div > h4 {
+  margin-top: -3rem;
+  color: var(--color-dark-blue);
+}
+
+.card-div > p {
+  color: var(--color-gray);
+}
+
+.card-div > span {
+  margin: 1rem 0;
+  color: var(--color-pink);
+}
+
+.card-div > span:hover {
+  cursor: pointer;
+  color: var(--color-pink-light);
 }
 
 footer {
@@ -119,4 +191,9 @@ footer {
 
 footer > button {
   background: var(--color-gradient-button-footer);
+}
+
+footer > button:hover {
+  cursor: pointer;
+  opacity: 0.5;
 }
