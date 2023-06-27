@@ -41,7 +41,7 @@ body {
   background: var(--color-gradient-button-body);
 }
 main {
-  margin: 0 10rem;
+  margin: 0 8%;
 }
 
 h1 {
@@ -69,7 +69,7 @@ h4 {
 }
 
 header {
-  margin: 2rem 10rem;
+  margin: 2rem 8%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -141,6 +141,7 @@ header > button:hover {
   padding: 4rem 2rem;
   border-radius: 0.6rem;
   height: 18rem;
+  line-height: 5.5rem;
 }
 
 .card-div {
@@ -196,4 +197,111 @@ footer > button {
 footer > button:hover {
   cursor: pointer;
   opacity: 0.5;
+}
+
+/* Responsive queries */
+@media only screen and (max-width: 500px) {
+  main {
+    margin: 0 0.7rem;
+  }
+  header {
+    margin: 2rem 0.7rem;
+  }
+  header > img {
+    width: 6rem;
+  }
+  .section-hero1 {
+    height: 37rem;
+    align-items: start;
+    margin-top: 4rem;
+  }
+
+  .section-hero1 > div > p {
+    width: 100%;
+  }
+  .section-hero1 > div > img {
+    content: url("./assets/image-hero-mobile.png");
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: 13rem;
+  }
+  .section-hero1 > div > h1 {
+    font-size: var(--font-heading-l);
+    line-height: var(--line-weight-l);
+  }
+  .section-cards {
+    grid-template: 1fr 1fr 1fr 1fr /1fr;
+  }
+  footer > img {
+    width: 6rem;
+  }
+}
+
+@media only screen and (min-width: 501px) and (max-width: 768px) {
+  main {
+    margin: 0 1rem;
+  }
+  header {
+    margin: 2rem 1rem;
+  }
+
+  header > img {
+    width: 6rem;
+  }
+  .section-hero1 {
+    height: 35rem;
+  }
+
+  .section-hero1 > div > p {
+    width: 60%;
+  }
+  .section-hero1 > div > img {
+    content: url("./assets/image-hero-tablet.png");
+    right: 20rem;
+    top: -5%;
+    font-size: var(--font-heading-s);
+  }
+  .section-hero1 > div > h1 {
+    font-size: var(--font-heading-l);
+    line-height: var(--line-weight-l);
+  }
+  .section-cards {
+    grid-template: 1fr 1fr 1fr /1fr 1fr;
+  }
+  footer > img {
+    width: 6rem;
+  }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  main {
+    margin: 0 5%;
+  }
+  header {
+    margin: 2rem 5%;
+  }
+  .section-hero1 {
+    height: 35rem;
+  }
+
+  .section-hero1 > div > p {
+    width: 60%;
+  }
+  .section-hero1 > div > img {
+    content: url("./assets/image-hero-tablet.png");
+    right: 20rem;
+    top: -5%;
+    font-size: var(--font-heading-s);
+  }
+  .section-hero1 > div > h1 {
+    font-size: var(--font-heading-l);
+    line-height: var(--line-weight-l);
+  }
+  .section-cards {
+    grid-template: 1fr 1fr 1fr/1fr 1fr;
+  }
+}
+
+@media only screen and (min-width: 1025px) {
 }
