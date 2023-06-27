@@ -33,7 +33,7 @@ Users should be able to:
 
 ### Links
 
-- [GitHub repo](https://jocular-churros-08ff76.netlify.app)
+- [GitHub repo](https://github.com/ernestoacosta1086/skilled-elearning-landing-page)
 - [Live Site URL](https://jocular-churros-08ff76.netlify.app)
 
 ## My process
