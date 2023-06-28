@@ -42,11 +42,10 @@ html {
 
 body {
   font-family: "Plus Jakarta Sans", sans-serif;
-  overflow-x: hidden;
   background: var(--color-gradient-button-body);
 }
 main {
-  margin: 0 8%;
+  padding: 0 8%;
 }
 
 h1 {
@@ -106,15 +105,14 @@ header > button:hover {
   height: 45rem;
   display: flex;
   align-items: center;
-}
-
-.section-hero1 > div {
   overflow-x: hidden;
+  width: 55%;
 }
 
 .section-hero1 > div > p {
-  width: 50%;
-  margin: 2rem 0;
+  width: 70%;
+  padding: 2rem 0;
+  color: var(--color-gray);
 }
 
 .section-hero1 > div > button {
@@ -128,19 +126,19 @@ header > button:hover {
 
 .section-hero1 > div > img {
   position: absolute;
-  left: 50%;
+  right: -24rem;
   top: -15%;
 }
 
 .section-cards {
   display: grid;
-  grid-template: 1fr 1fr/1fr 1fr 1fr;
+  grid-template: 1fr 1fr / 1fr 1fr 1fr;
   column-gap: 2rem;
   row-gap: 4rem;
   margin: 4rem 0 8rem 0;
 }
 
-.main-card-div {
+.main-c-div {
   background: var(--color-gradient-button);
   color: var(--color-white);
   padding: 4rem 2rem;
@@ -152,13 +150,14 @@ header > button:hover {
 .card-div {
   border-radius: 0.6rem;
   display: flex;
+  height: 15rem;
   flex-direction: column;
   justify-content: space-between;
   padding: 2rem;
-  border: none;
   color: var(--color-dark-blue);
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.09);
   background-color: white;
+  height: 18rem;
 }
 
 .card-div > img {
@@ -168,7 +167,7 @@ header > button:hover {
 }
 
 .card-div > h4 {
-  margin-top: -3rem;
+  margin-top: -4rem;
   color: var(--color-dark-blue);
 }
 
@@ -205,20 +204,79 @@ footer > button:hover {
 }
 
 /* Responsive queries */
-@media only screen and (max-width: 500px) {
+
+@media only screen and (max-width: 1024px) {
   main {
-    margin: 0 0.7rem;
+    padding: 0 5%;
   }
   header {
-    margin: 2rem 0.7rem;
+    margin: 2rem 5%;
   }
+  .section-hero1 {
+    height: 30rem;
+  }
+
+  .section-hero1 > div > p {
+    width: 100%;
+  }
+  .section-hero1 > div > img {
+    content: url("./assets/image-hero-tablet.png");
+    right: -18rem;
+    top: -5%;
+    font-size: var(--font-heading-s);
+  }
+  .section-hero1 > div > h1 {
+    font-size: var(--font-heading-l);
+    line-height: var(--line-weight-l);
+  }
+  .section-cards {
+    grid-template: 1fr 1fr 1fr/1fr 1fr;
+    margin-top: 10rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  main {
+    padding: 0 1rem;
+  }
+  header {
+    margin: 2rem 1rem;
+  }
+
   header > img {
     width: 6rem;
   }
   .section-hero1 {
+    height: 30rem;
+  }
+
+  .section-hero1 > div > p {
+    width: 100%;
+  }
+  .section-hero1 > div > img {
+    content: url("./assets/image-hero-tablet.png");
+    right: -18rem;
+    top: -5%;
+    font-size: var(--font-heading-s);
+  }
+  .section-hero1 > div > h1 {
+    font-size: var(--font-heading-l);
+    line-height: var(--line-weight-l);
+  }
+  .section-cards {
+    grid-template: 1fr 1fr 1fr / 1fr 1fr;
+  }
+  footer > img {
+    width: 6rem;
+  }
+}
+
+@media only screen and (max-width: 680px) {
+  .section-hero1 {
     height: 37rem;
     align-items: start;
     margin-top: 4rem;
+    width: 100%;
   }
 
   .section-hero1 > div > p {
@@ -229,84 +287,32 @@ footer > button:hover {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    margin-top: 13rem;
-  }
-  .section-hero1 > div > h1 {
-    font-size: var(--font-heading-l);
-    line-height: var(--line-weight-l);
+    margin-top: 14rem;
+    width: 90%;
   }
   .section-cards {
-    grid-template: 1fr 1fr 1fr 1fr /1fr;
-  }
-  footer > img {
-    width: 6rem;
+    column-gap: 1rem;
   }
 }
 
-@media only screen and (min-width: 501px) and (max-width: 768px) {
-  main {
-    margin: 0 1rem;
-  }
+@media only screen and (max-width: 500px) {
   header {
-    margin: 2rem 1rem;
+    margin: 2rem 0.7rem;
   }
-
   header > img {
     width: 6rem;
   }
-  .section-hero1 {
-    height: 35rem;
-  }
 
-  .section-hero1 > div > p {
-    width: 60%;
-  }
-  .section-hero1 > div > img {
-    content: url("./assets/image-hero-tablet.png");
-    right: 20rem;
-    top: -5%;
-    font-size: var(--font-heading-s);
-  }
   .section-hero1 > div > h1 {
     font-size: var(--font-heading-l);
     line-height: var(--line-weight-l);
   }
   .section-cards {
-    grid-template: 1fr 1fr 1fr /1fr 1fr;
+    grid-template: 1fr 1fr 1fr 1fr / 1fr;
+    row-gap: 4rem;
   }
+
   footer > img {
     width: 6rem;
   }
-}
-
-@media only screen and (min-width: 769px) and (max-width: 1024px) {
-  main {
-    margin: 0 5%;
-  }
-  header {
-    margin: 2rem 5%;
-  }
-  .section-hero1 {
-    height: 35rem;
-  }
-
-  .section-hero1 > div > p {
-    width: 60%;
-  }
-  .section-hero1 > div > img {
-    content: url("./assets/image-hero-tablet.png");
-    right: 20rem;
-    top: -5%;
-    font-size: var(--font-heading-s);
-  }
-  .section-hero1 > div > h1 {
-    font-size: var(--font-heading-l);
-    line-height: var(--line-weight-l);
-  }
-  .section-cards {
-    grid-template: 1fr 1fr 1fr/1fr 1fr;
-  }
-}
-
-@media only screen and (min-width: 1025px) {
 }
